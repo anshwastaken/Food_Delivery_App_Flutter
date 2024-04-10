@@ -54,17 +54,104 @@ class _HomePageState extends State<HomePage> {
               ),
               Showitem(),
 
-              Row(
-                children: [
-                  Container(
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/sal1.png",width: 300,height: 300,)
-                      ],
+              SizedBox(
+                height: 30,
+              ),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+
+                  children: [
+                    Material(
+                      color: Colors.green,
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset("assets/images/sal1.png",width: 150,height: 150,),
+                            Text("Vegan Salad",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                            Text("Cucumber,lettuce,tomato,corn and onion",style: TextStyle(color: Colors.black54),),
+                            Text("Rs 399",style: TextStyle(fontWeight: FontWeight.w600),)
+                          ],
+                        ),
+                      ),
                     ),
-                  )
-                ],
+
+                    SizedBox(
+                      width: 20,
+                    ),
+
+                    Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.green,
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset("assets/images/salad3.png",width: 150,height: 150,),
+                            Text("Protien Salad",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                            Text("Cucumber,cottage cheese,tomato,olive and onion",style: TextStyle(color: Colors.black54),),
+                            Text("Rs 499",style: TextStyle(fontWeight: FontWeight.w600),)
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      width: 20.0,
+                    ),
+
+
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.red,
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/salad4.png",width: 150,height: 150,fit: BoxFit.cover,),
+                
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 20.0,),
+                          Container(
+                            child: Text("Chicken salad",
+                            style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                          ),
+                          SizedBox(height: 5.0,),
+                          Container(
+                            child: Text("Cucumber, chicken ,tomato, avacado, corn and onion",
+                            style: TextStyle(fontSize: 18,color: Colors.black54),),
+                          ),
+                          SizedBox(height: 5.0,),
+                          Container(
+                            child: Text("Rs 799",
+                            style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+                          ),
+
+                        ],
+                      )
+                
+                    ],
+                  ),
+                ),
               )
+
             ],
           )
           ),
